@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.film {
+  padding: 20px;
+  padding-bottom: 35px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: aliceblue;
+  margin: 10px;
+  width: 40vw;
+}
+
+#filmsContainer {
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+.rating {
+  display: flex;
+  align-items: flex-end;
+  font-size: 40px;
+  line-height: 0.75;
+}
+
+.rating_body {
+  position: relative;
+}
+
+.rating_body ::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.rating_active {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating_active::before {
+  content: "★★★★★";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: rgb(238, 86, 75);
+}
+
+.rating_item {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.rating_item {
+  flex: 0 0 20%;
+  height: 100%;
+  opacity: 0;
+}
+
+.rating_value {
+  font-size: 50%;
+  line-height: 1;
+  padding: 0px 0px 0px 10px;
+}
+
+.form_item {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
